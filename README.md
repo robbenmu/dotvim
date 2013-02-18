@@ -1,4 +1,4 @@
 dotvim
 ======
 
-vimrc1
+vimrc
