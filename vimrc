@@ -1,4 +1,4 @@
-" vim {
+" myVim {
 "   Who: robbenmu (@yahoo.com.cn)
 "   Ver: 1.0
 " }
@@ -24,4 +24,5 @@
 " Config {
 source ~/.vim/config.vim
 source ~/.vim/plugin_config.vim
-}
+
+" }
