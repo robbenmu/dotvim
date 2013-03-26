@@ -33,9 +33,9 @@
   set nowrap                      " wrap long lines
   set autoindent                  " indent at the same level of the previous line
   set expandtab                   " tabs are spaces, not tabs
-  set shiftwidth=2                " use indents of 2 spaces
-  set tabstop=2                   " an indentation every two columns
-  set softtabstop=2               " let backspace delete indent
+  set shiftwidth=4                " use indents of 2 spaces
+  set tabstop=4                   " an indentation every two columns
+  set softtabstop=4               " let backspace delete indent
   set diffopt+=iwhite,vertical    " ignore the difference of indents
   set matchpairs=(:),{:},[:],<:>
   set foldmethod=marker

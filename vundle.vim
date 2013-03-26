@@ -26,6 +26,8 @@
   NeoBundle 'matchit.zip'                 " MatchIt
   NeoBundle 'othree/html5.vim'            " html
   NeoBundle 'acustodioo/vim-tmux'         " tmux
+  NeoBundle 'tpope/vim-pathogen'          " pathogen
+  NeoBundle 'Raimondi/delimitMate'        " delimitMate'
 
   " Auto-Installation
   if neobundle#exists_not_installed_bundles()
@@ -33,5 +35,5 @@
       \ string(neobundle#get_not_installed_bundle_names())
     execute ':NeoBundleInstall'
   endif
-  
+
 " }

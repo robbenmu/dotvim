@@ -18,13 +18,16 @@
 " }
 
 " SyntaxCheckers {
+  let g:syntastic_enable_signs=1
+  let g:syntastic_auto_loc_list=1
+
   let g:syntastic_mode_map = {
     \ 'mode': 'active',
     \ 'passive_filetypes': ['html'] }
 
   let g:syntastic_python_checker = 'flake8'
   let g:syntastic_python_checker_args = '--ignore="E401,E501"'
-  let g:syntastic_javascript_jshint_conf = '~/.jshintrc'
+"  let g:syntastic_javascript_jshint_conf = '~/.jshintrc'
 " }
 
 " vimScript {
@@ -93,7 +96,9 @@
 " Autocmd {
   autocmd! bufwritepost vimrc source ~/.vim/vimrc
 " }
-
+" pathogen{
+  call pathogen#infect()
+" }
 " Functions {
   function! StripTrailingWhitespace()
     " Preparation: save last search, and cursor position.
