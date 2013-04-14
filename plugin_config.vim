@@ -99,6 +99,9 @@
 " pathogen{
   call pathogen#infect()
 " }
+" vim-multiple-cursors{
+  let g:multi_cursor_use_default_mapping=0
+" }
 " Functions {
   function! StripTrailingWhitespace()
     " Preparation: save last search, and cursor position.

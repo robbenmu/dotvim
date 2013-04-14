@@ -18,6 +18,7 @@
   NeoBundle 'plasticboy/vim-markdown'     " Syntax highlighting and matching rules for Markdown
   NeoBundle 'tpope/vim-fugitive'          " A Git wrapper so awesome, it should be illegal
   NeoBundle 'tpope/vim-surround'          " quoting/parenthesizing made simple
+  NeoBundle 'terryma/vim-multiple-cursors' "True Sublime Text style multiple selections for Vim
 
   " Github `vim-scripts`
   NeoBundle 'sudo.vim'                    " Allows one to edit a file with prevledges from an unprivledged session
