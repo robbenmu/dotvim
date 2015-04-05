@@ -142,7 +142,8 @@
 " }
 
 " file automatic header {
-
+" http://blog.csdn.net/orangleliu/article/details/41902851
+"
   autocmd BufNewFile *.js 0r ~/.vim/vim_template/vim_js_header
   autocmd BufNewFile *.js ks|call FileName()|'s  
 
