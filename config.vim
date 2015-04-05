@@ -18,7 +18,7 @@
   set virtualedit=onemore         " allow for cursor beyond last character
   set history=800                 " Store a ton of history (default is 20)
   set hidden                      " allow buffer switching without saving
-  "set autochdir                   " change directory to the current window
+  "set autochdir                  " change directory to the current window
   
   set backup
   set backupdir=~/.vim/.backup
@@ -52,10 +52,10 @@
   set background=dark
 
   if has('gui_macvim')
-    colorscheme solarized
+    colorscheme gruvbox
   else
     let g:solarized_termcolors=256
-    colorscheme solarized
+    colorscheme gruvbox
 	  "colorscheme molokai
   endif
 
@@ -74,7 +74,8 @@
     set laststatus=2
   endif
 
-  set rnu                         " relative line number
+  "set rnu                         " relative line number
+  set nu
   set numberwidth=4               " set the width of line number gutter column
   set linespace=2                 " set spaces between rows
   set ignorecase                  " case insensitive search
@@ -101,9 +102,9 @@
     endif
 
     if has("gui_gtk2")
-      set guifont=Monaco\ 13,Consolas\ 13
+      set guifont=menlo\ 15,Consolas\ 13
     else
-      set guifont=Monaco:h13,Consolas:h13
+      set guifont=menlo:h15,Consolas:h13
     endif
   endif
 " }
@@ -139,3 +140,21 @@
   " toggle between relative and absolute numbering
   nnoremap <F3> :NumbersToggle<CR>
 " }
+
+" file automatic header {
+
+  autocmd BufNewFile *.js 0r ~/.vim/vim_template/vim_js_header
+  autocmd BufNewFile *.js ks|call FileName()|'s  
+
+  fun FileName()  
+    if line("$") > 10  
+        let l = 10  "这里是字母L 不是数字1   
+    else  
+        let l = line("$")  
+    endif   
+    exe "1," . l . "g/@file.*/s/@file.*/@file " .expand("%")    
+       "最前面是数字1，这里的File Name: 要和模板中一致  
+  endfun   
+
+" }
+

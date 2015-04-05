@@ -1,5 +1,5 @@
 " myVim {
-"   Who: robbenmu (@yahoo.com.cn)
+"   Who: robbenmu (@126.com)
 "   Ver: 1.0
 " }
 
