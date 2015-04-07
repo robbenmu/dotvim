@@ -244,10 +244,10 @@
 " }
 
 " vim-multiple-cursors {
-  let g:multi_cursor_use_default_mapping=0
+  " let g:multi_cursor_use_default_mapping=0
 " }
 
-" vim-css-color {
+" vim-JsBeautify {
   " map <c-f> :call JsBeautify()<cr>
   " or
   autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
@@ -269,6 +269,29 @@
   au BufRead,BufNewFile *.tpl set filetype=smarty3
 " }
 
+
+" Tabularize {
+
+  nmap <leader>a= :Tabularize /=<CR>
+  vmap <leader>a= :Tabularize /=<CR>
+  nmap <leader>a: :Tabularize /:\zs<CR>
+  vmap <leader>a: :Tabularize /:\zs<CR>
+
+  " https://gist.github.com/tpope/287147
+  inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+
+  function! s:align()
+    let p = '^\s*|\s.*\s|\s*$'
+    if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+      let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+      let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+      Tabularize/|/l1
+      normal! 0
+      call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+    endif
+  endfunction
+
+" }
 
 
 

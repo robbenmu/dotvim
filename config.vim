@@ -19,14 +19,14 @@
   set history=800                 " Store a ton of history (default is 20)
   set hidden                      " allow buffer switching without saving
   "set autochdir                  " change directory to the current window
-  
+
   set backup
   set backupdir=~/.vim/.backup
   set directory=~/.vim/.tmp
   " Persistent Undo
   set undofile
   set undodir=~/.vim/.undo
-  
+
 " }
 
 " Formatting {
@@ -145,17 +145,17 @@
 " http://blog.csdn.net/orangleliu/article/details/41902851
 "
   autocmd BufNewFile *.js 0r ~/.vim/vim_template/vim_js_header
-  autocmd BufNewFile *.js ks|call FileName()|'s  
+  autocmd BufNewFile *.js ks|call FileName()|'s
 
-  fun FileName()  
-    if line("$") > 10  
-        let l = 10  "这里是字母L 不是数字1   
-    else  
-        let l = line("$")  
-    endif   
-    exe "1," . l . "g/@file.*/s/@file.*/@file " .expand("%")    
-       "最前面是数字1，这里的File Name: 要和模板中一致  
-  endfun   
+  fun FileName()
+    if line("$") > 10
+        let l = 10  "这里是字母L 不是数字1
+    else
+        let l = line("$")
+    endif
+    exe "1," . l . "g/@file.*/s/@file.*/@file " .expand("%")
+       "最前面是数字1，这里的File Name: 要和模板中一致
+  endfun
 
 " }
 
