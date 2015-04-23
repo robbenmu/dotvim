@@ -292,6 +292,13 @@
   endfunction
 
 " }
+"
+" JsDoc {
+  let g:jsdoc_allow_input_prompt=1
+  let g:jsdoc_additional_descriptions=1
+  let g:jsdoc_access_descriptions=1
+  let g:jsdoc_allow_shorthand=1
+" }
 
 
 
