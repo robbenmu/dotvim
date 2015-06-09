@@ -44,7 +44,7 @@ NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-surround'
 
 
-" @ NeoBundle --- [ CWD File Buffer Manager ] 
+" @ NeoBundle --- [ CWD File Buffer Manager ]
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
@@ -95,6 +95,7 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'iakio/smarty3.vim'
 NeoBundle 'matchit.zip'
 NeoBundle 'maksimr/vim-jsbeautify'
+NeoBundle 'millermedeiros/vim-esformatter'
 NeoBundle 'einars/js-beautify'
 NeoBundle 'heavenshell/vim-jsdoc'
 
@@ -108,7 +109,7 @@ NeoBundle 'heavenshell/vim-jsdoc'
 NeoBundle 'godlygeek/tabular'
 
 " @ NeoBundle --- [ File Motion ]
-NeoBundle 'EasyMotion'                  
+NeoBundle 'EasyMotion'
 
 
 " Auto-Installation

@@ -250,7 +250,7 @@
 " vim-JsBeautify {
   " map <c-f> :call JsBeautify()<cr>
   " or
-  autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+  autocmd FileType javascript noremap <buffer>  <c-f> :Esformatter<cr>
   " for html
   autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
   " for css or scss
